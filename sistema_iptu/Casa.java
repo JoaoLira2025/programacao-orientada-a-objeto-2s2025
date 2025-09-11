@@ -7,7 +7,7 @@ public class Casa {
 
 
     public Double calcularIPTU(){
-        return this.areaM2 * this.municipio.getPrecoM2();
+        return this.areaM2 * this.municipio.getPrecoM2() * 1.005;
     }
 
     public Casa(Municipio municipio, Double areaM2, Integer vagas) {

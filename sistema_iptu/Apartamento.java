@@ -6,7 +6,7 @@ public class Apartamento {
 
     public Double calcularIPTU(){
         
-            return this.areaM2 * this.municipio.getPrecoM2();
+            return this.areaM2 * this.municipio.getPrecoM2() * 1.005;
     }
 
     public Apartamento(Municipio municipio, Double areaM2, Integer vagas, Boolean possuiElevador) {
