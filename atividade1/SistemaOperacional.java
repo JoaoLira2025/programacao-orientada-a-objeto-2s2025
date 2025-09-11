@@ -6,15 +6,15 @@ public class SistemaOperacional {
         this.computador = computador;
     }
 
-    public void executarPrograma(Programa programa) {
+    public boolean executarPrograma(Programa programa) {
 
         if (programa.getSSDOcupado() > computador.getSSD()) {
             System.out.println("Erro: Armazenamento SSD insuficiente para instalar o programa.");
-            return;
+            return false;
         }
         if (programa.getMemoriaRAMAlocada() > computador.getMemoriaRAM()) {
             System.out.println("Erro: Memória RAM insuficiente para executar o programa.");
-            return;
+            return false;
         }
 
         Float tempoExecucao = (float) programa.getQuantidadeOperacoes() /
@@ -22,6 +22,7 @@ public class SistemaOperacional {
 
         System.out.println("Programa executado com sucesso!");
         System.out.printf("Tempo de execução: %.2f segundos%n", tempoExecucao);
+        return true;
     }
 
     public Computador getComputador() {
