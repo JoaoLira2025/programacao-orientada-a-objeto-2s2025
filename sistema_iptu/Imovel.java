@@ -6,7 +6,7 @@ public class Imovel {
 
     public Double calcularIPTU(){
         
-            return this.areaM2 * this.municipio.getPrecoM2() * 1.005;
+            return this.areaM2 * this.municipio.getPrecoM2();
     }
 
     public Imovel(Municipio municipio, Double areaM2, Integer vagas) {
