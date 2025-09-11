@@ -5,3 +5,4 @@ public class SecretariaFazenda {
         System.out.println("IPTU r$: " + apt.calcularIPTU());
         }
 }
+
