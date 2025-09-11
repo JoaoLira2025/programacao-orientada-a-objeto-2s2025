@@ -1,19 +1,19 @@
-public class Apartamento {
+public class Chacara {
     private Municipio municipio;
     private Double areaM2;
     private Integer vagas;
-    private Boolean possuiElevador;
+    private Boolean possuiPocoArtesianoBoolean;
 
     public Double calcularIPTU(){
         
             return this.areaM2 * this.municipio.getPrecoM2();
     }
 
-    public Apartamento(Municipio municipio, Double areaM2, Integer vagas, Boolean possuiElevador) {
+    public Chacara(Municipio municipio, Double areaM2, Integer vagas, Boolean possuiPocoArtesianoBoolean) {
         this.municipio = municipio;
         this.areaM2 = areaM2;
         this.vagas = vagas;
-        this.possuiElevador = possuiElevador;
+        this.possuiPocoArtesianoBoolean = possuiPocoArtesianoBoolean;
     }
 
     public Municipio getMunicipio() {
@@ -40,16 +40,16 @@ public class Apartamento {
         this.vagas = vagas;
     }
 
-    public Boolean isPossuiElevador() {
-        return this.possuiElevador;
+    public Boolean isPossuiPocoArtesianoBoolean() {
+        return this.possuiPocoArtesianoBoolean;
     }
 
-    public Boolean getPossuiElevador() {
-        return this.possuiElevador;
+    public Boolean getPossuiPocoArtesianoBoolean() {
+        return this.possuiPocoArtesianoBoolean;
     }
 
-    public void setPossuiElevador(Boolean possuiElevador) {
-        this.possuiElevador = possuiElevador;
+    public void setPossuiPocoArtesianoBoolean(Boolean possuiPocoArtesianoBoolean) {
+        this.possuiPocoArtesianoBoolean = possuiPocoArtesianoBoolean;
     }
 
 }
