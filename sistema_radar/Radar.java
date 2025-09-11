@@ -1,38 +1,43 @@
 package sistema_radar;
 
-
-
-
 public class Radar {
-    public Integer limiteVelocidade;
-    public String localizacao;
-
-
-    public Radar (Integer limiteVelocidade, String localizacao)
-    {
-        this.limiteVelocidade = limiteVelocidade;
-        this.localizacao = localizacao;
     
+    private String localizacao;
+    private Integer limiteVelocidade;
+
+    public Radar(String localizacao, Integer limiteVelocidade){
+        this.localizacao = localizacao;
+        this.limiteVelocidade = limiteVelocidade;
     }
 
-
-
-
-public void avaliarVelocidade(Carro carro){
-    if(carro.getVelocidade() > this.limiteVelocidade)
-    {
-        //emitir notificação
-        emitirNotificacao(carro.placa, carro.getVelocidade());
+    public String getLocalizacao(){
+        return this.localizacao;
     }
-}
+
+    public void setLocalizacao(String localizacao){
+        this.localizacao = localizacao;
+    }
+
+    public Integer getLimiteVelocidade(){
+        return this.limiteVelocidade;
+    }
+
+    public void setLimiteVelocidade(Integer limiteVelocidade){
+        this.limiteVelocidade = limiteVelocidade;
+    }
+
     public void emitirNotificacao(String placa, Integer velocidadeObservada){
-        System.out.print("Placa: "+ placa);
-        System.out.println("\nVelocidade Observada: "+ velocidadeObservada);
-        System.out.println("Limite da via: "+ this.limiteVelocidade);
+        System.out.println("Placa: "+placa);
+        System.out.println("Velocidade observada: "+velocidadeObservada);
+        System.out.println("Localização: "+ this.localizacao);
+        System.out.println("Velocidade da via: "+ this.limiteVelocidade);
+        
     }
 
-   
-   
-
+    public void avaliarVelocidade(Carro carro){
+        if(carro.getVelocidade() > this.limiteVelocidade){
+            emitirNotificacao(carro.getPlaca(), carro.getVelocidade());
+        }
+    }
 
 }
