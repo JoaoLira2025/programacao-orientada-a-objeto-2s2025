@@ -5,7 +5,7 @@ public class Computador {
     private Integer memoriaRAM;
     private Integer SSD;
     private Integer nucleos;
-    private Float operacoesPorSegundo;
+    private Float operacoesPorSegundo; //melhor alternativa seria double
 
     public Computador(Integer memoriaRAM, Integer SSD, Integer nucleos, Float operacoesPorSegundo) {
         this.memoriaRAM = memoriaRAM;
